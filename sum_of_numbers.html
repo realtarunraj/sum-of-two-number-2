@@ -1,0 +1,93 @@
+<DOCTYPE html>
+<html>
+	<head>
+		<title> Adding Two Numbers </title>
+		<meta charset="utf-8">
+
+		<style>
+			body{
+				padding-top: 10%;
+			}
+			table{
+				padding-bottom: 30px;
+				padding-top: 20px;
+			}
+			.links{
+				text-align: center;
+			}
+		</style>
+	</head>
+
+	<body>
+		<u><h1 align="center"> <em>Sum Calculator </em></h1></u>
+
+		<table width="50%" align="center">
+			<tr bgcolor="pink">
+				<td width="30%" align="center"> 1st Number </td>
+				<td width="20%" align="center" id="a"> a </td>
+			</tr>
+
+			<tr bgcolor="pink">
+				<td width="30%" align="center"> 2nd Number </td>
+				<td width="20%" align="center" id="b"> b </td>
+			</tr>
+
+			<tr bgcolor="pink">
+				<th width="30%" align="center"> Sum </th>
+				<th width="20%" align="center" id="c"> result </th>
+			</tr>
+
+		</table>
+
+
+		<div class="links">
+			<a href="#" id="d"> Click Here </a> to enter 1st number. <br><br>
+			<a href="#" id="e"> Click Here </a> to enter 2nd number <br><br>
+			<a href="#" id="sum"> Click Here </a> to get Sum of a+b.
+		</div>		
+
+
+		<script type="text/javascript">
+
+
+/* Get 1st Number */
+			var d = document.getElementById("d");
+			d.addEventListener('click', function(){
+				var a = document.getElementById("a");
+				var a1 = a.innerHTML= prompt("Enter first Number");
+					if (a1===""){
+						var a2 = document.getElementById("a");
+						a2.innerHTML="0";
+					}
+					else{
+						var a2 = document.getElementById("a");
+						a2.innerHTML= a1;
+					}
+			});
+
+/* Get 2nd Number */
+			var e = document.getElementById("e");
+			e.addEventListener('click', function(){
+				var b = document.getElementById("b");
+				var b1 = b.innerHTML= prompt("Enter second Number");
+					if (b1===""){
+						var b2 = document.getElementById("b");
+						b2.innerHTML="0";
+					}		
+					else{
+						var b2 = document.getElementById("b");
+						b2.innerHTML= b1;
+					}
+			});
+
+/* Get Sum of 1st & 2nd Number */
+
+			var sum= document.getElementById("sum");
+			sum.addEventListener('click', function(){
+				var c = document.getElementById("c");
+				c.innerHTML= parseInt(a.innerHTML) + parseInt(b.innerHTML);      // parseInt is used to convert string to a integer.
+			});
+
+		</script>
+	</body>
+</html>
